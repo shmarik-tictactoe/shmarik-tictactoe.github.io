@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-field {
+    display: flex;
+    width: 460px;
+    height: 460px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    background: #232323;
+    box-shadow: 10px 10px 30px #000, -10px -10px 30px #333;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-weight: bold;
+    width: 140px;
+    height: 140px;
+    background-color: #2d2d2d;
+    border-radius: 20px;
+    box-shadow: inset -3px -3px 8px rgba(255, 255, 255, 0.05),
+                inset 3px 3px 8px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.cell.x {
+    color: #00bfff;
+}
+
+.cell.o {
+    color: #ff4f81;
+}
+
+/* Победная подсветка */
+.cell.winning {
+    animation: glowWin 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowWin {
+    0% {
+        box-shadow: 0 0 10px #fff, 0 0 20px #0ff;
+        background-color: #3a3a3a;
+    }
+    100% {
+        box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+        background-color: #505050;
+    }
+}
