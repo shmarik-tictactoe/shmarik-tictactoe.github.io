@@ -89,8 +89,6 @@ body::before {
 
 .cell {
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
     font-size: 3.5rem;
     font-weight: 600;
     width: 120px;
@@ -106,23 +104,6 @@ body::before {
 .cell:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-}
-
-.cell.x {
-    color: #00ffcc;
-}
-
-.cell.o {
-    color: #ff4f81;
-}
-
-.cell.show {
-    animation: fadeIn 0.4s ease-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.5) rotate(10deg); }
-    to { opacity: 1; transform: scale(1) rotate(0deg); }
 }
 
 .cell.winning {
