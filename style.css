@@ -186,48 +186,6 @@ body::before {
     from { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
     to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 }
-
-@media (max-width: 600px) {
-    .wrapper {
-        padding: 15px;
-    }
-
-    .title {
-        font-size: 2rem;
-    }
-
-    .game-field {
-        grid-template-columns: repeat(3, 90px);
-        grid-gap: 8px;
-        padding: 10px;
-    }
-
-    .cell {
-        width: 90px;
-        height: 90px;
-        font-size: 2.8rem;
-    }
-
-    .score-board {
-        font-size: 1.2rem;
-        gap: 20px;
-    }
-
-    .restart-btn {
-        padding: 10px 25px;
-        font-size: 1rem;
-    }
-
-    .message {
-        font-size: 1.5rem;
-        padding: 15px 30px;
-        width: 80%;
-    }
-}
-
-
-
-
   
 @keyframes fill-circle1 {
     0% {
@@ -255,7 +213,6 @@ body::before {
         transform: rotate(270deg);
       }
   }
-  
   
 
 .half {
@@ -296,12 +253,9 @@ body::before {
     100% { width: 60px; }
   }
 
-
-
-
 .part {
-    width: 60px;
-    height: 10px;
+    width: 70px;
+    height: 16px;
     background-color: #00ffcc;
     position: absolute;
 }
@@ -321,4 +275,70 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media (max-width: 600px) {
+    @keyframes fillx {
+        0% { width: 0; }
+        100% { width: 50px; }
+      }
+
+    .wrapper {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .game-field {
+        grid-template-columns: repeat(3, 90px);
+        grid-gap: 8px;
+        padding: 10px;
+    }
+
+    .cell {
+        width: 90px;
+        height: 90px;
+        font-size: 2.8rem;
+    }
+
+    .score-board {
+        font-size: 1.2rem;
+        gap: 20px;
+    }
+
+    .restart-btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    .message {
+        font-size: 1.5rem;
+        padding: 15px 30px;
+        width: 80%;
+    }
+
+    .zero {
+        width: 90px;
+        height: 90px;
+    }
+
+    .krest {
+        width: 90px;
+        height: 90px;
+    }
+
+    .part {
+        width: 50px;
+        height: 10px;
+    }
+
+    .half {
+        width: 50px;
+        height: 50px;
+        border: 10px solid transparent;
+        border-left: 10px solid #ff4f81 ;
+    }
 }
