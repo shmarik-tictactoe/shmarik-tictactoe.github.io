@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac toe</title>
+    <title>Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="wrapper">
+        <h1 class="title">Крестики нолики</h1>
+        <div class="score-board">
+            <span>X: <span id="x-score">0</span></span>
+            <span>O: <span id="o-score">0</span></span>
+        </div>
         <main>
             <div class="game-field">
-                <div class="cell" id = '0 0'></div>
-                <div class="cell" id = '1 0'></div>
-                <div class="cell" id = '2 0'></div>
-                <div class="cell" id = '0 1'></div>
-                <div class="cell" id = '1 1'></div>
-                <div class="cell" id = '2 1'></div>
-                <div class="cell" id = '0 2'></div>
-                <div class="cell" id = '1 2'></div>
-                <div class="cell" id = '2 2'></div>
+                <div class="cell" id="0 0"></div>
+                <div class="cell" id="1 0"></div>
+                <div class="cell" id="2 0"></div>
+                <div class="cell" id="0 1"></div>
+                <div class="cell" id="1 1"></div>
+                <div class="cell" id="2 1"></div>
+                <div class="cell" id="0 2"></div>
+                <div class="cell" id="1 2"></div>
+                <div class="cell" id="2 2"></div>
             </div>
         </main>
-        <footer>
-            
-        </footer>
+        <button class="restart-btn">Restart Game</button>
+        <div class="message" id="game-message"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js">
+
+    </script>
 </body>
 </html>
