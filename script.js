@@ -217,6 +217,8 @@ function resetGame() {
     [0, 0, 0],
   ];
   move = [krest, 1];
+  moveDispaly.innerHTML = 'X'
+  moveDispaly.classList.remove('red')
   gameActive = true;
   document.querySelectorAll(".cell").forEach((cell) => {
     cell.innerHTML = "";
