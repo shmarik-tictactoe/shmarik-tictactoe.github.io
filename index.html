@@ -10,9 +10,14 @@
 <body>
     <div class="wrapper">
         <h1 class="title">Крестики нолики</h1>
-        <div class="score-board">
-            <span>X: <span id="x-score">0</span></span>
-            <span>O: <span id="o-score">0</span></span>
+        <div class="move-score">
+            <div class="move">
+                <span style="color: #00ffcc;">Ходят: <span id="move">X</span></span>
+            </div>
+            <div class="score-board">
+                <span>X: <span id="x-score">0</span></span>
+                <span>O: <span id="o-score">0</span></span>
+            </div>
         </div>
         <main>
             <div class="game-field">
@@ -27,7 +32,7 @@
                 <div class="cell" id="2 2"></div>
             </div>
         </main>
-        <button class="restart-btn">Restart Game</button>
+        <button class="restart-btn">Новая игра</button>
         <div class="message" id="game-message"></div>
     </div>
     <script src="script.js">

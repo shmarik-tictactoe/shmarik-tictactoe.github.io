@@ -4,6 +4,7 @@ const restartBtn = document.querySelector(".restart-btn");
 const message = document.querySelector("#game-message");
 const xScoreDisplay = document.querySelector("#x-score");
 const oScoreDisplay = document.querySelector("#o-score");
+const moveDispaly = document.querySelector('#move')
 
 const zero = `<div class="zero">
     <div class="half first"></div>
@@ -39,7 +40,19 @@ function setMove() {
     move[0] = krest;
     move[1] = 1;
   }
+  changeMove()
   console.log("Current move:", move);
+}
+
+function changeMove() {
+    if (move[1] == 1) {
+        moveDispaly.innerHTML = 'X'
+        moveDispaly.classList.toggle('red')
+    }
+    else {
+        moveDispaly.innerHTML = 'O'
+        moveDispaly.classList.toggle('red')
+    }
 }
 
 // Обработчик клика по ячейке
@@ -95,11 +108,11 @@ function checkWin() {
       if (field[i][0] === 1) {
         scores.x++;
         xScoreDisplay.textContent = scores.x;
-        showMessage("X Wins!");
+        showMessage("Победа X!");
       } else {
         scores.o++;
         oScoreDisplay.textContent = scores.o;
-        showMessage("O Wins!");
+        showMessage("Победа O!");
       }
       return;
     }
@@ -121,11 +134,11 @@ function checkWin() {
       if (field[0][j] === 1) {
         scores.x++;
         xScoreDisplay.textContent = scores.x;
-        showMessage("X Wins!");
+        showMessage("Победа X!");
       } else {
         scores.o++;
         oScoreDisplay.textContent = scores.o;
-        showMessage("O Wins!");
+        showMessage("Победа O!");
       }
       return;
     }
@@ -146,11 +159,11 @@ function checkWin() {
     if (field[0][0] === 1) {
       scores.x++;
       xScoreDisplay.textContent = scores.x;
-      showMessage("X Wins!");
+      showMessage("Победа X!");
     } else {
       scores.o++;
       oScoreDisplay.textContent = scores.o;
-      showMessage("O Wins!");
+      showMessage("Победа O!");
     }
     return;
   }
@@ -169,11 +182,11 @@ function checkWin() {
     if (field[0][2] === 1) {
       scores.x++;
       xScoreDisplay.textContent = scores.x;
-      showMessage("X Wins!");
+      showMessage("Победа X!");
     } else {
       scores.o++;
       oScoreDisplay.textContent = scores.o;
-      showMessage("O Wins!");
+      showMessage("Победа O!");
     }
     return;
   }
@@ -192,7 +205,7 @@ function checkWin() {
 
   if (isDraw) {
     gameActive = false;
-    showMessage("Draw!");
+    showMessage("Ничья!");
   }
 }
 

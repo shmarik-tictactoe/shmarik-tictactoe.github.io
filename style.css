@@ -5,7 +5,27 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.move-score {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.move {
+    display: flex;
+    gap: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -74,6 +94,10 @@ body::before {
 }
 
 .score-board span:nth-child(2) {
+    color: #ff4f81;
+}
+
+.red{
     color: #ff4f81;
 }
 
@@ -147,7 +171,7 @@ body::before {
     transform: translate(-50%, -50%);
     background: linear-gradient(135deg, rgba(30, 30, 50, 0.9), rgba(20, 20, 40, 0.9));
     color: #00ffcc;
-    padding: 20px 40px;
+    padding: 20px 30px;
     border-radius: 15px;
     font-size: 1.8rem;
     font-weight: 600;
