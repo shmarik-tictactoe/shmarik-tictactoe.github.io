@@ -1,6 +1,7 @@
 // DOM элементы
 const gameField = document.querySelector(".game-field");
 const restartBtn = document.querySelector(".restart-btn");
+const resetBtn = document.querySelector('.reset-btn')
 const message = document.querySelector("#game-message");
 const xScoreDisplay = document.querySelector("#x-score");
 const oScoreDisplay = document.querySelector("#o-score");
@@ -210,7 +211,7 @@ function checkWin() {
 }
 
 // Сброс состояния игры
-function resetGame() {
+function restartGame() {
   field = [
     [0, 0, 0],
     [0, 0, 0],
@@ -227,6 +228,14 @@ function resetGame() {
   console.log("Game reset");
 }
 
+function resetScore() {
+    scores.x = 0
+    scores.o = 0
+    xScoreDisplay.textContent = scores.x
+    oScoreDisplay.textContent = scores.o
+}
+
 // Обработчики событий
 gameField.addEventListener("click", sellhit);
-restartBtn.addEventListener("click", resetGame);
+restartBtn.addEventListener("click", restartGame);
+resetBtn.addEventListener("click", resetScore)

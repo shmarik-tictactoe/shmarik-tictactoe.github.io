@@ -12,7 +12,7 @@
         <h1 class="title">Крестики нолики</h1>
         <div class="move-score">
             <div class="move">
-                <span style="color: #00ffcc;">Ходят: <span id="move">X</span></span>
+                <span style="color: #00ffcc;" class="move-table">Ходят: <span id="move">X</span></span>
             </div>
             <div class="score-board">
                 <span>X: <span id="x-score">0</span></span>
@@ -32,7 +32,10 @@
                 <div class="cell" id="2 2"></div>
             </div>
         </main>
-        <button class="restart-btn">Новая игра</button>
+        <footer>
+            <button class="restart-btn btn">Новая игра</button>
+            <button class="reset-btn btn">Сбросить счет</button>
+        </footer>
         <div class="message" id="game-message"></div>
     </div>
     <script src="script.js">

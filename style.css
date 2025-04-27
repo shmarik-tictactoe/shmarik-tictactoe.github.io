@@ -80,8 +80,8 @@ body::before {
 
 .score-board {
     display: flex;
-    gap: 30px;
     font-size: 1.5rem;
+    gap: 30px;
     font-weight: 600;
     background: rgba(255, 255, 255, 0.05);
     padding: 10px 20px;
@@ -145,7 +145,7 @@ body::before {
     }
 }
 
-.restart-btn {
+.btn {
     padding: 12px 30px;
     font-size: 1.2rem;
     font-weight: 600;
@@ -158,7 +158,7 @@ body::before {
     box-shadow: 0 4px 15px rgba(0, 255, 204, 0.4);
 }
 
-.restart-btn:hover {
+.btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 255, 204, 0.6);
     background: linear-gradient(90deg, #00bfff, #00ffcc);
@@ -282,6 +282,10 @@ body::before {
     align-items: center;
 }
 
+.move-table {
+    font-size: 1.5rem;
+}
+
 
 @media (max-width: 600px) {
     @keyframes fillx {
@@ -314,9 +318,14 @@ body::before {
         gap: 20px;
     }
 
-    .restart-btn {
+    .move-table {
+        font-size: 1.2rem;
+        gap: 20px;
+    }
+
+    .btn {
         padding: 10px 25px;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .message {
